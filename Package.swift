@@ -19,8 +19,16 @@ let package = Package(
             dependencies: [
                 "PhotonHTTPDNS"
             ],
-            resources: [
-                .process("PhotonDNSSource.bundle")
+// SPM 最终会将此 bundle 重命名为 PhotonHTTPDNS__PhotonHTTPDNS.bundle, 但framework会以PhotonDNSSource.bundle来获取资源
+// 原框架不规范, 由于没有源码, 需要将此 bundle 单独引入到主 target, 这样 product 产物中才是"正确"的 bundle 名
+//            resources: [
+//                .process("PhotonDNSSource.bundle")
+//            ],
+            exclude: [
+                "PhotonDNSSource.bundle"
+            ],
+            cSettings: [
+                .define("NS_BLOCK_ASSERTIONS", to: "1", .when(configuration: .release))
             ],
             cxxSettings: [
                 .define("NS_BLOCK_ASSERTIONS", to: "1", .when(configuration: .release))

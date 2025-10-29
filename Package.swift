@@ -6,9 +6,6 @@ import PackageDescription
 // 实际版本 1.0.8-openssl-1.1.1c
 let package = Package(
     name: "PhotonHTTPDNS",
-    platforms: [
-        .iOS(.v12)
-    ],
     products: [
         .library(
             name: "PhotonHTTPDNS",
@@ -43,8 +40,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PhotonHTTPDNS",
-            url: "https://github.com/qianshoutech/PhotonHTTPDNS/releases/download/1.0.8-openssl-1.1.1d/PhotonHTTPDNS.xcframework.zip",
-            checksum: "f082c5bb22c96e0ccf0c7c6046e3006ee9e49e06dced9500d932d047e3284bec"
+            url: "https://github.com/qianshoutech/PhotonHTTPDNS/releases/download/1.0.9/PhotonHTTPDNS.xcframework.zip",
+            checksum: "3b3f29b88c042e4951798e9f49b9e43e5104d40a522c847e43259e7509694ea9"
         )
     ]
 )

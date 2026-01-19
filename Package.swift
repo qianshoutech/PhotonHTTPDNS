@@ -40,8 +40,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PhotonHTTPDNS",
-            url: "https://github.com/qianshoutech/PhotonHTTPDNS/releases/download/1.0.10/PhotonHTTPDNS.xcframework.zip",
-            checksum: "0c4eb903f26fe1a7f54b9d26786f357fe5c0d727ece5c429d3b8e9966741dd83"
+            url: "https://github.com/qianshoutech/PhotonHTTPDNS/releases/download/1.0.11/PhotonHTTPDNS.xcframework.zip",
+            checksum: "406e801d8b170e8b060caa35bb0b05bfbef064b05e8541ebcf7a62980ac27cd7"
         )
     ]
 )
